@@ -38,6 +38,7 @@ app.post('/solve', function (req, res) {
   console.log('app path found');
   console.log(req.body.data);
   res.setHeader('Content-Type', 'application/json');
+  res.write( JSON.stringify({data: req.body.data}) );
   res.end();
 });
 
